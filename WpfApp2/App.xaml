@@ -1,0 +1,28 @@
+﻿<Application x:Class="WpfApp2.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfApp2"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Dark/ButtonEqs.xaml"/>
+                <ResourceDictionary Source="Dark/ButtonOpNumDark.xaml"/>
+                <ResourceDictionary Source="Dark/ButtonClearDark.xaml"/>
+                <ResourceDictionary Source="Dark/TextBoxDark.xaml"/>
+                <ResourceDictionary Source="Dark/MenuDark.xaml"/>
+                <ResourceDictionary Source="Dark/MenuItemDark.xaml"/>
+                <ResourceDictionary Source="Dark/EmptyButtonsDark.xaml"/>
+                <ResourceDictionary Source="Dark/ListBoxDark.xaml"/>
+                <ResourceDictionary Source="Dark/ComboBoxDark.xaml"/>
+                <ResourceDictionary Source="Light/ButtonOpNumLight.xaml"/>
+                <ResourceDictionary Source="Light/TextBoxLight.xaml"/>
+                <ResourceDictionary Source="Light/EmptyButtonsLight.xaml"/>
+                <ResourceDictionary Source="Light/ButtonClearLight.xaml"/>
+                <ResourceDictionary Source="Light/MenuLight.xaml"/>
+                <ResourceDictionary Source="Light/MenuItemLight.xaml"/>
+                <ResourceDictionary Source="Light/ListBoxLight.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

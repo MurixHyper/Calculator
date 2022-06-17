@@ -1,0 +1,75 @@
+﻿<Window x:Class="Calculator.Converter"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="Converter" Height="415" Width="390">
+    <Grid x:Name="grid" Background="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Menu Style="{DynamicResource MenuDark}" x:Name="menu" Height="25" VerticalAlignment="Top" Grid.ColumnSpan="6">
+            <MenuItem Style="{DynamicResource MenuItemDark}" x:Name="menuitem1" Header="Mode">
+                <MenuItem Header="Standart" Click="ModeStandart" x:Name="menuitem2"></MenuItem>
+                <MenuItem Header="Scientific" Click="ModeScientific" x:Name="menuitem3"></MenuItem>
+                <MenuItem Header="Programmer" Click="ModeProgrammer" x:Name="menuitem4"></MenuItem>
+            </MenuItem>
+            <MenuItem Style="{DynamicResource MenuItemDark}" x:Name="menuitem5" Header="History" Click="ClickHistory"></MenuItem>
+            <MenuItem Style="{DynamicResource MenuItemDark}" x:Name="DLmode" Header="Light mode" Click="DarkLight"></MenuItem>
+        </Menu>
+        <!-- Buttons -->
+        <Button Style="{DynamicResource ButtonOpNumDark}" x:Name="btn_0" Grid.Column="3" Grid.Row="6" Click="btn_num_click">0</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" x:Name="btn_1" Grid.Column="2" Grid.Row="5" Click="btn_num_click">1</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" x:Name="btn_2" Grid.Column="3" Grid.Row="5" Click="btn_num_click">2</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" x:Name="btn_3" Grid.Column="4" Grid.Row="5" Click="btn_num_click">3</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" x:Name="btn_4" Grid.Column="2" Grid.Row="4" Click="btn_num_click">4</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" x:Name="btn_5" Grid.Column="3" Grid.Row="4" Click="btn_num_click">5</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" x:Name="btn_6" Grid.Column="4" Grid.Row="4" Click="btn_num_click">6</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" x:Name="btn_7" Grid.Column="2" Grid.Row="3" Click="btn_num_click">7</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" x:Name="btn_8" Grid.Column="3" Grid.Row="3" Click="btn_num_click">8</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" x:Name="btn_9" Grid.Column="4" Grid.Row="3" Click="btn_num_click">9</Button>
+        <!-- Modes -->
+        <Button Style="{DynamicResource ButtonOpNumDark}" x:Name="btn_area" Grid.Column="0" Grid.Row="3" Click="area_click">Area</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" x:Name="btn_length" Grid.Column="1" Grid.Row="3" Click="length_click">Length</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" x:Name="btn_temperature" Grid.Column="0" Grid.Row="4" Click="temp_click">Temp</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" x:Name="btn_volume" Grid.Column="1" Grid.Row="4" Click="vol_click">Volume</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" x:Name="btn_mass" Grid.Column="0" Grid.Row="5" Click="mass_click">Mass</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" x:Name="btn_data" Grid.Column="1" Grid.Row="5" Click="data_click">Data</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" x:Name="btn_speed" Grid.Column="0" Grid.Row="6" Click="speed_click">Speed</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" x:Name="btn_time" Grid.Column="1" Grid.Row="6" Click="time_click">Time</Button>
+        <!-- Operations -->
+        <Button Style="{DynamicResource ButtonOpNumDark}" x:Name="btn_up" Grid.Column="6" Grid.Row="5" Content="&#8593;" Click="btn_up_click"></Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" x:Name="btn_down" Grid.Column="6" Grid.Row="6" Content="&#8595;" Click="btn_down_click"></Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" x:Name="btn_plmi" Grid.Column="2" Grid.Row="6" Click="btn_plmi_click">+/-</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" x:Name="btn_dot" Grid.Column="4" Grid.Row="6" Click="btn_dot_click">.</Button>
+        <!-- Clear buttons -->
+        <Button Style="{DynamicResource ButtonClearDark}" x:Name="btn_back" Grid.Column="6" Grid.Row="3" Content="&lt;=" Click="btn_back_click"></Button>
+        <Button Style="{DynamicResource ButtonClearDark}" x:Name="btn_C" Grid.Column="6" Grid.Row="4" Click="btn_c_click">C</Button>
+        <!-- TextBoxes -->
+        <TextBox Style="{DynamicResource TextBoxDark}" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="4" TextAlignment="Right" VerticalAlignment="Bottom" FontSize="40" x:Name="txtValueUp">0</TextBox>
+        <TextBox Style="{DynamicResource TextBoxDark}" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="4" TextAlignment="Right" VerticalAlignment="Bottom" FontSize="40" x:Name="txtValueDown">0</TextBox>
+        <!-- ComboBoxes -->
+        <ComboBox Style="{DynamicResource ComboBoxDark}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" x:Name="ComboUp">
+            <ComboBox.ItemsPanel>
+                <ItemsPanelTemplate/>
+            </ComboBox.ItemsPanel>
+        </ComboBox>
+        <ComboBox Style="{DynamicResource ComboBoxDark}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" x:Name="ComboDown"></ComboBox>
+    </Grid>
+</Window>

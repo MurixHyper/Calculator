@@ -1,0 +1,24 @@
+﻿<Window x:Class="Calculator.History"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="History" Height="445" Width="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Menu Style="{DynamicResource MenuDark}" x:Name="menu">
+            <MenuItem Style="{DynamicResource MenuItemDark}" x:Name="menuitem1" Header="Clear All" Click="Clear"></MenuItem>
+            <MenuItem Style="{DynamicResource MenuItemDark}" x:Name="menuitem2" Header="Update" Click="Update"></MenuItem>
+            <MenuItem Style="{DynamicResource MenuItemDark}" x:Name="DLmode" Header="Light mode" Click="DarkLight"></MenuItem>
+        </Menu>
+        <ListBox Style="{DynamicResource ListBoxDark}" Grid.Row="1" Grid.Column="0" x:Name="HistoryList"></ListBox>
+    </Grid>
+</Window>

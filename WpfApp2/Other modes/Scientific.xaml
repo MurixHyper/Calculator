@@ -1,0 +1,80 @@
+﻿<Window x:Class="WpfApp2.Other_modes.Scientific"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2.Other_modes"
+        mc:Ignorable="d"
+        Title="Scientific" Height="385" Width="420">
+    <Grid x:Name="grid" Background="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Menu Style="{DynamicResource MenuDark}" x:Name="menu" Height="25" VerticalAlignment="Top" Grid.ColumnSpan="7">
+            <MenuItem x:Name="menuitem1" Header="Mode">
+                <MenuItem Style="{DynamicResource MenuItemDark}" x:Name="menuitem2"  Header="Standart" Click="ModeStandart"></MenuItem>
+                <MenuItem Style="{DynamicResource MenuItemDark}" x:Name="menuitem3" Header="Programmer" Click="ModeProgrammer"></MenuItem>
+            </MenuItem>
+            <MenuItem Style="{DynamicResource MenuItemDark}" x:Name="menuitem4" Header="History" Click="ClickHistory"></MenuItem>
+            <MenuItem Style="{DynamicResource MenuItemDark}" x:Name="DLmode" Header="Light mode" Click="DarkLight"></MenuItem>
+        </Menu>
+        <!-- Buttons -->
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="3" Grid.Column="3" x:Name="btn_7" Click="btn_num_Click">7</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="3" Grid.Column="4" x:Name="btn_8" Click="btn_num_Click">8</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="3" Grid.Column="5" x:Name="btn_9" Click="btn_num_Click">9</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="4" Grid.Column="3" x:Name="btn_4" Click="btn_num_Click">4</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="4" Grid.Column="4" x:Name="btn_5" Click="btn_num_Click">5</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="4" Grid.Column="5" x:Name="btn_6" Click="btn_num_Click">6</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="5" Grid.Column="3" x:Name="btn_1" Click="btn_num_Click">1</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="5" Grid.Column="4" x:Name="btn_2" Click="btn_num_Click">2</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="5" Grid.Column="5" x:Name="btn_3" Click="btn_num_Click">3</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="6" Grid.Column="4" x:Name="btn_0" Click="btn_num_Click">0</Button>
+        <!-- Operations -->
+        <Button Style="{DynamicResource ButtonStyleEqs}" Grid.Row="6" Grid.Column="6" x:Name="btn_eqs" Click="btn_eqs_Click">=</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="5" Grid.Column="6" x:Name="btn_plus" Click="btn_op_Click">+</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="4" Grid.Column="6" x:Name="btn_mi" Click="btn_op_Click">-</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="3" Grid.Column="6" x:Name="btn_mult" Click="btn_op_Click">*</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="2" Grid.Column="6" x:Name="btn_div" Click="btn_op_Click">/</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="6" Grid.Column="3" x:Name="btn_plmi" Click="btn_plmi_Click">+/-</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="6" Grid.Column="5" x:Name="btn_dot" Click="btn_dot_Click">.</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="2" Grid.Column="2" x:Name="btn_sqrt" Click="btn_sqrt_Click">√</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="2" Grid.Column="1" x:Name="btn_pow" Click="btn_op_Click">^</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="6" Grid.Column="2" x:Name="btn_percent" Click="btn_perc_Click">%</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="6" Grid.Column="1" x:Name="btn_mod" Click="btn_op_Click">mod</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="6" Grid.Column="0" x:Name="btn_abs" Click="btn_mod_Click">|x|</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="5" Grid.Column="2" x:Name="btn_pi" Click="btn_pi_Click">π</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="5" Grid.Column="1" x:Name="btn_ex" Click="btn_ex_Click">e^x</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="5" Grid.Column="0" x:Name="btn_1x" Click="btn_1x_Click">1/x</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="4" Grid.Column="0" x:Name="btn_cot" Click="btn_cot_Click">cot</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="4" Grid.Column="1" x:Name="btn_ln" Click="btn_ln_Click">ln</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="4" Grid.Column="2" x:Name="btn_log" Click="btn_log_Click">log</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="3" Grid.Column="0" x:Name="btn_sin" Click="btn_sin_Click">sin</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="3" Grid.Column="1" x:Name="btn_cos" Click="btn_cos_Click">cos</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="3" Grid.Column="2" x:Name="btn_tan" Click="btn_tan_Click">tan</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="2" Grid.Column="0" x:Name="btn_avg" Click="btn_op_Click">avg</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="1" Grid.Column="0" x:Name="btn_min_max" Click="btn_op_Click">min/max</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="1" Grid.Column="1" x:Name="btn_exp" Click="btn_exp_Click">exp</Button>
+        <Button Style="{DynamicResource ButtonOpNumDark}" Grid.Row="1" Grid.Column="2" x:Name="btn_fact" Click="btn_fact_Click">x!</Button>
+        <!-- Clear Buttons -->
+        <Button Style="{DynamicResource ButtonClearDark}" Grid.Row="2" Grid.Column="3" x:Name="btn_C" Click="btn_C_Click">C</Button>
+        <Button Style="{DynamicResource ButtonClearDark}" Grid.Row="2" Grid.Column="4" x:Name="btn_CE" Click="btn_CE_Click">CE</Button>
+        <Button Style="{DynamicResource ButtonClearDark}" Grid.Row="2" Grid.Column="5" x:Name="btn_back" Content="&lt;=" Click="btn_back_Click"></Button>
+        <!--Text Box-->
+        <TextBox Style="{DynamicResource TextBoxDark}" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="4" TextAlignment="Right" VerticalAlignment="Center" FontSize="40" x:Name="txtValue" Height="72">0</TextBox>
+    </Grid>
+</Window>
